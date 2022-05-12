@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import './helpers/custom-route.dart';
 import './providers/products.dart';
 import './providers/cart.dart';
 import './providers/auth.dart';
@@ -49,6 +50,10 @@ class MyApp extends StatelessWidget {
             fontFamily: 'Lato',
             colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.purple)
                 .copyWith(secondary: Colors.deepOrange),
+            pageTransitionsTheme: PageTransitionsTheme(builders: {
+              TargetPlatform.android: CustomPageTransitionBuilder(),
+              TargetPlatform.iOS: CustomPageTransitionBuilder(),
+            }),
             textTheme: TextTheme(
               caption: TextStyle(
                 fontSize: 28,

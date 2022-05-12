@@ -48,6 +48,9 @@ class UserProductsScreen extends StatelessWidget {
                             children: [
                               Card(
                                 elevation: 6,
+                                margin: const EdgeInsets.symmetric(vertical: 8),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(15)),
                                 child: UserProductItem(
                                   productsData.items[i].id,
                                   productsData.items[i].title,

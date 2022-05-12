@@ -19,6 +19,8 @@ class CartScreen extends StatelessWidget {
       body: Column(
         children: [
           Card(
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
             elevation: 4,
             margin: const EdgeInsets.all(15),
             child: Padding(
